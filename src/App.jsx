@@ -1,12 +1,11 @@
+import './css/App.css'
 
-import './App.css'
-
-function App() {
-
-
+/*import { About, Contact, Experience, Feedbacks, Hero, Navbar, Stars, Tech, Works } from './components'*/
+import { Initial } from './pages/Home/Initial'
+const App = () => {
   return (
     <>
-     
+      <Initial/>
     </>
   )
 }
