@@ -29,8 +29,11 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-
+import usa from "./usa.png";
+import spain from "./spain.jpg";
 export {
+  spain,
+  usa,
   logo,
   backend,
   creator,
