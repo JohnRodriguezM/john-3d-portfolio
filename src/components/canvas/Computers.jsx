@@ -1,77 +1,95 @@
-
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
-import { Suspense, useEffect, useState, useRef } from 'react'
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
+import { Suspense, useEffect, useState, useRef } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Preload, SpotLight, useGLTF } from "@react-three/drei";
 
-import CanvasLoader from '../Loader'
+import './css/Computer.css'
+
+import CanvasLoader from "../Loader";
 
 const Computers = () => {
-  const computer = useGLTF('./desktop_pc/scene.gltf')
+  const computer = useGLTF("./desktop_pc/scene.gltf");
   return (
     <mesh
-      style={{
-        boxShadow:
-          "0px 0px 20px 0px rgba(255,255,255,0.75)"
-      }}
     >
-      <hemisphereLight intensity={0.15} groundColor="black" />
-      <pointLight intensity={1} />
+      <hemisphereLight intensity={1} groundColor="gray" />
+      <pointLight intensity={1.5} />
+      <SpotLight
+        intensity={1}
+        position={[-20, 20, 10]}
+        angle={0.12}
+        penumbra={1}
+        castShadow
+        shadow-mapSize={1024}
+        
+      />
+
       <primitive
-      style={{
-        boxShadow:
-          "0px 0px 20px 0px rgba(255,255,255,0.75)"
-      }}
         object={computer.scene}
-        scale={0.75}
-        position={[0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
+        scale={0.90}
+        position={[0, -2.25, -1.2]}
+        rotation={[-0, -0, -0.09]}
       />
     </mesh>
-  )
+  );
 };
 
 const ComputersCanvas = () => {
-  const [canvasHeight, setCanvasHeight] = useState(500); // Set initial canvas height
+  const [canvasHeight, setCanvasHeight] = useState(2000);
   const canvasRef = useRef();
+
   const handleResize = () => {
     const canvas = canvasRef.current;
     const container = canvas.parentNode;
     const { width } = container.getBoundingClientRect();
-    setCanvasHeight(Math.min(width * 0.5, 500)); // Set height to 50% of width or 500px, whichever is smaller
+
+
+
+    setCanvasHeight(Math.min(width * 0.63, 500));
     canvas.style.width = `${width}px`;
-    canvas.style.height = `${canvasHeight}px`;
+    canvas.style.height = `${Math.min(width * 0.63, 500)}px`;
   };
+
   useEffect(() => {
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     handleResize();
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   return (
-    <section style={{
-      marginTop: "11rem", position: "absolute", width: '100%', height: `${canvasHeight}px`
-    }}>
-      <Canvas
-    style={{
-        boxShadow:
-          "0px 0px 20px 0px rgba(255,255,255,0.75)"
+    <section
+  className="mt-96 xs:mt-80  md:mt-96 lg:mt-72"
+      style={{
+        //marginTop: "14rem",
+        cursor: "all-scroll",
+        position: "absolute",
+        width: "100%",
+        height: `${canvasHeight}px`,
+        animation: " levitate 2s ease-in-out infinite alternate",
+        filter: "drop-shadow(10px 10px 100px rgba(153, 50, 204, 0.75))"
+
       }}
+    >
+      <Canvas
         frameloop="demand"
         shadows
-        camera={{ position: [20, 3, 5], fov: 25 }}
+        camera={{ position: [20, 3, 3], fov: 25 }}
         gl={{ preserveDrawingBuffer: true }}
-        style={{ position: 'absolute', top: 0, left: 0 }}
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: 1,
+        }}
         ref={canvasRef}
       >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
-          style={{
-        boxShadow:
-          "0px 0px 20px 0px rgba(255,255,255,0.75)"
-      }}
             enableZoom={false}
-            maxPolarAngle={Math.PI / 8}
+            maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
           />
           <Computers />
@@ -79,34 +97,10 @@ const ComputersCanvas = () => {
         <Preload all />
       </Canvas>
     </section>
-  )
+  );
 };
 
 export default ComputersCanvas;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*const Computers = () => {
@@ -149,31 +143,6 @@ const ComputersCanvas = () => {
 };
 
 export default ComputersCanvas*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";

@@ -46,7 +46,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="logo"
-            className="w-12 h-12 object-contain rounded-xl"
+            className="w-10 h-10 mr-2 object-contain rounded-xl"
           />
           <p className="text-white text-[1.1] font-bold cursor-pointer flex">
             John &nbsp;
@@ -60,7 +60,7 @@ const Navbar = () => {
         </Link>
 
         <ul
-          className={`list-none items-center ${toggle ? " flex flex-col gap-4 w-1/2 justify-center bg-gradient-to-l from-purple-900 to-black p-7 rounded-3xl" : "hidden"
+          className={`list-none items-center ${toggle ? " flex flex-col gap-4 w-1/2 justify-center bg-gradient-to-l from-black to-purple-900 p-7 rounded-3xl" : "hidden"
             } sm:flex flex-row gap-11`}
         >
           {navLinks.map((link) => (
