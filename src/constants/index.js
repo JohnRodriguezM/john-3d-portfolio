@@ -3,26 +3,31 @@ import {
   backend,
   creator,
   web,
-  javascript,
+  aws,
+  //javascript,
   typescript,
-  html,
-  css,
+  //html,
+  //css,
   reactjs,
   redux,
   tailwind,
   nodejs,
-  mongodb,
   git,
-  figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
+  tripplanner,
+  movie,
+  rick,
+  juan,
+  realState,
+  //threejs,
+  jausme,
+  express,
+  astro,
+  GH,
+  firebase,
+  next,
+  supabase,
+  reactRouter,
 } from "../assets";
 
 export const navLinks = [
@@ -31,17 +36,9 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
+    id: "experience",
     title: "Work",
   },
-  /*{
-    id: "contact",
-    title: "Contact",
-  },*/
- /* {
-    id: "hire",
-    title: "Hire Me",
-  }*/
 ];
 
 const services = [
@@ -64,111 +61,146 @@ const services = [
 ];
 
 const technologies = [
+  /* {
+     name: "HTML 5",
+     icon: html,
+     category: "Frontend",
+     level: 1,
+   },
+   {
+     name: "CSS 3",
+     icon: css,
+     category: "Frontend",
+     level: 1,
+   },*/
   {
-    name: "HTML 5",
-    icon: html,
+    name: "Tailwind CSS",
+    icon: tailwind,
+    category: "Frontend",
+    level: 2,
   },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
+  /* {
+      name: "JavaScript",
+      icon: javascript,
+      category: "Frontend",
+      level: 2,
+    },*/
   {
     name: "TypeScript",
     icon: typescript,
+    category: "Frontend",
+    level: 3,
   },
   {
     name: "React JS",
     icon: reactjs,
+    category: "Frontend",
+    level: 4,
+  },
+  {
+    name: "React Router",
+    icon: reactRouter,
+    category: "Frontend",
+    level: 3,
   },
   {
     name: "Redux Toolkit",
     icon: redux,
+    category: "Frontend",
+    level: 3,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "Astro",
+    icon: astro,
+    category: "Frontend",
+    level: 2,
+  },
+  {
+    name: "Next JS",
+    icon: next,
+    category: "Frontend",
+    level: 4,
   },
   {
     name: "Node JS",
     icon: nodejs,
+    category: "Backend",
+    level: 3,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "Express JS",
+    icon: express,
+    category: "Backend",
+    level: 3,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "Firebase",
+    icon: firebase,
+    category: "Backend",
+    level: 2,
   },
+  {
+    name: "Supabase",
+    icon: supabase,
+    category: "Backend",
+    level: 2,
+  },
+  /*  {
+      name: "Three JS",
+      icon: threejs,
+      category: "Frontend",
+      level: 4,
+    },*/
   {
     name: "git",
     icon: git,
+    category: "Tools",
+    level: 3,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "GitHub",
+    icon: GH,
+    category: "Tools",
+    level: 3,
   },
   {
-    name: "docker",
+    name: "Docker",
     icon: docker,
+    category: "Infrastructure",
+    level: 2,
+  },
+  {
+    name: "AWS",
+    icon: aws,
+    category: "Infrastructure",
+    level: 2,
   },
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Frontend Developer",
+    company_name: "Tripplanner.ai",
+    icon: tripplanner,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Dec 2021 - Jan 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Implement different pages and components with vanilla JavaScript, ensuring they are accessible, intuitive and efficient.",
+      "Fix bugs and improve app stability based on team requirements.",
+      "Participar en la planificación y dar priorización de características de la página web.",
+
     ],
   },
   {
     title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    company_name: "Jausme CO",
+    icon: jausme,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "Jun 2022 - Jan 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Develop and maintain web applications using libraries such as React and its ecosystem in TypeScript",
+      "Manage the attention to the requirements by the internal work team to ensure that the application is coherent and integrates correctly with existing systems.",
+      "Participation in the definition of standards and good development practices through the testing of existing applications using testing libraries such as: jest and react-testing library."
     ],
   },
 ];
@@ -202,30 +234,33 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Movie app",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "The movies app allows you to watch a large number of movies and TV shows online. You can search by genre, actor or director, save your favorites and receive personalized recommendations. The app is constantly updated with new movies and shows so you always have something new to watch.",
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
+        name: "javascript",
+        color: "yellow-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
+        name: "html",
+        color: "orange-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "scss",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: movie,
+    source_code_link: "https://github.com/JohnRodriguezM/movie-app",
+    link_page: "https://movie-app-silk-delta.vercel.app/main.html",
   },
+
+
   {
-    name: "Job IT",
+    name: "Rick and Morty Fan App",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "The Rick and Morty app allows you to watch all the episodes of the series. You can browse the episodes by season, save your favourites. Enjoy the interdimensional universe of Rick and Morty!.",
     tags: [
       {
         name: "react",
@@ -236,17 +271,21 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "scss",
-        color: "pink-text-gradient",
+        name: "firebase",
+        color: "yellow-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: rick,
+    source_code_link: "https://github.com/JohnRodriguezM/rick-morty-fan-app",
+    link_page: "https://rick-morty-app-c905f.firebaseapp.com/",
   },
+
+
+
   {
-    name: "Trip Guide",
+    name: "Political project",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Our campaign page presents our proposals and government objectives in a platform that is easy to navigate and accessible from any device. The page is secure and designed to adapt to different screen sizes.",
     tags: [
       {
         name: "nextjs",
@@ -261,9 +300,31 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },
+    image: juan,
+    source_code_link: "https://github.com/JohnRodriguezM/political-project",
+    link_page: "https://juan-jose-cubides.pages.dev/",
+  }, {
+    name: "Real state project",
+    description:
+      "Our real estate page presents our properties and objectives in a platform that is easy to navigate and accessible from any device. The page is secure and designed to adapt to different screen sizes.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: realState,
+    source_code_link: "https://github.com/JohnRodriguezM/real-estate",
+    link_page: "https://web-inmuweb-inmobiliaria.pages.dev/",
+  }
 ];
 
 export { services, technologies, experiences, testimonials, projects };

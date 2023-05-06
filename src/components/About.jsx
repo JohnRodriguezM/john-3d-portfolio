@@ -1,56 +1,23 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { stylesUsing } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { Wrapper } from "../HOC";
+import ServiceCard from "./ServiceCard";
 
-const ServiceCard = ({ title, index }) => {
+
+function About ()  {
   return (
-    <Tilt
-      className="cursor-pointer xs:-[250px] w-11/12 flex justify-center flex-wrap  mx-auto"
-      options={{
-        max: 25,
-        scale: 1.05,
-        speed: 500,
-        glare: true,
-        "max-glare": 0.5
-
-      }}
-    >
-      <motion.div
-        className="w-96 mx-auto green-pink-gradient p-[1px] rounded-3xl shadow-card"
-        variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
+    <>
+      <motion.div variants={textVariant()}
+        className="flex flex-col items-center justify-center md:mt-20"
+        //id="about"
       >
-        <div options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-          className="bg-tertiary rounded-[10px] py-5 px-12 min-h-[280px] flex flex-col justify-evenly items-center flex-wrap"
-        >
-
-          <img
-            src={services[index].icon}
-            alt={title}
-            className="w-24 h-24 object-contain"
-          />
-          <h3 className="text-xl font-bold mt-4">{title}</h3>
-        </div>
-
-      </motion.div>
-    </Tilt>
-  );
-};
-const About = () => {
-  return (
-    <div id = "about" className="py-24">
-      <motion.div  variants={textVariant()}
-        className="flex flex-col items-center justify-center "
-      >
-        <p className={stylesUsing.sectionSubText}>Introducción</p>
+        <p className={`${stylesUsing.sectionSubText} mt-20`}>Introducción</p>
         <h2 className={stylesUsing.sectionHeadText}>Overview.</h2>
       </motion.div>
       <motion.p
@@ -65,8 +32,9 @@ const About = () => {
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-    </div>
+    </>
   );
-};
+}
 
-export default About;
+
+export default Wrapper(About, "about");
