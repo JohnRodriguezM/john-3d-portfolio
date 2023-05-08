@@ -23,7 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-.env*
-.flaskenv*
-!.env.project
-!.env.vault
+.env
+
+# vscode
+.vscode

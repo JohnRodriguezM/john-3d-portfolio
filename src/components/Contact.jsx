@@ -10,7 +10,10 @@ import { stylesUsing } from "../styles"
 import { back } from "../assets";
 import { Link } from "react-router-dom";
 
+
+
 const Contact = () => {
+
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -21,6 +24,8 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
+
+
     const { target } = e;
     const { name, value } = target;
 
@@ -30,52 +35,52 @@ const Contact = () => {
     });
   };
 
+  //tBLytVHuIgf_8dUSV
+  //template_sio1o4a
+  //service_lvj1maa
+  console.log(import.meta.env.VITE_SERVICE_ID)
   const handleSubmit = (e) => {
     e.preventDefault();
-    /*    setLoading(true);
-    
-        emailjs
-          .send(
-            import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-            import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-            {
-              from_name: form.name,
-              to_name: "JavaScript Mastery",
-              from_email: form.email,
-              to_email: "sujata@jsmastery.pro",
-              message: form.message,
-            },
-            import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-          )
-          .then(
-            () => {
-              setLoading(false);
-              alert("Thank you. I will get back to you as soon as possible.");
-    
-              setForm({
-                name: "",
-                email: "",
-                message: "",
-              });
-            },
-            (error) => {
-              setLoading(false);
-              console.error(error);
-    
-              alert("Ahh, something went wrong. Please try again.");
-            }
-          );*/
+    setLoading(true);
+
+    emailjs.send(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, {
+      from_name: form.name,
+      to_name: "John Rodriguez",
+      from_email: form.email,
+      to_email: "johnjairorodriguez384@gmail.com",
+      message: form.message,
+    },
+      import.meta.env.VITE_PUBLIC_ID
+    )
+      .then((res) => {
+        console.log(res);
+        alert("Thanks for the message, I'll contact you asap")
+        setLoading(false);
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        });
+      }
+      )
+      .catch((err) => {
+        console.log(err);
+        alert('An error ocurred, please try again')
+        setLoading(false);
+      }
+      );
   };
 
   return (
     <>
       <Link to="/">
 
-        <span
-          className=' bg-white-100 absolute top-4 left-2 z-[-1] w-12 h-12 rounded-full flex items-center justify-center cursor-pointer'
+        <Link to="/"
+
+          className=' bg-white-100 absolute top-4 left-2 z-[-1] w-12 h-12 rounded-full flex items-center justify-center cursor-pointer z-50'
         >
           <img src={back} alt="" />
-        </span>
+        </Link>
       </Link>
       <div
         className={`xl:mt-12 flex  flex-col-reverse gap-10 overflow-hidden`}
@@ -102,7 +107,7 @@ const Contact = () => {
                 name='name'
                 value={form.name}
                 onChange={handleChange}
-                placeholder="What's your good name?"
+                placeholder="What's your name?"
                 className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
               />
             </label>
@@ -113,7 +118,7 @@ const Contact = () => {
                 name='email'
                 value={form.email}
                 onChange={handleChange}
-                placeholder="What's your web address?"
+                placeholder="What's your email?"
                 className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
               />
             </label>
@@ -124,7 +129,7 @@ const Contact = () => {
                 name='message'
                 value={form.message}
                 onChange={handleChange}
-                placeholder='What you want to say?'
+                placeholder='What is your message?'
                 className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
               />
             </label>

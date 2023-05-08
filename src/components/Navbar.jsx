@@ -85,6 +85,7 @@ const Navbar = () => {
           <button
             onClick={() => {
               //window.open("https://www.fiverr.com/johnny_1999?up_rollout=true", "_blank");
+             window.scrollTo(0, 0);
               settoggle(false);
             }}
             className=" sm:block bg-secondary text-white px-4 py-2 rounded-md font-medium hover:bg-white hover:text-secondary transition duration-300"
