@@ -4,8 +4,6 @@ import { Initial } from './pages/Home/Initial'
 import { Contact, StarsCanvas  } from './components'
 /*import { Stars } from '@react-three/drei'*/
 const App = () => {
-     
-  
   return (
     <>
       <Routes>
