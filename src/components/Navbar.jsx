@@ -4,18 +4,17 @@ import { Link } from "react-router-dom";
 import { stylesUsing } from "../styles";
 import { navLinks } from "../constants";
 
-import { logo, menu, close, usa, spain } from "../assets";
+import { logo, menu, close, /*usa, spain*/ } from "../assets";
 
-const imgStyle = {
+/*const imgStyle = {
   width: "30px",
   height: "30px",
   objectFit: "fill",
   borderRadius: "43%",
   padding: "2px",
   cursor: "pointer",
-  //animation: "2s linear infinite",
 };
-
+*/
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, settoggle] = useState(false);
@@ -80,6 +79,9 @@ const Navbar = () => {
               </a>
             </li>
           ))}
+          <Link
+            to="/contact"
+          >
           <button
             onClick={() => {
               //window.open("https://www.fiverr.com/johnny_1999?up_rollout=true", "_blank");
@@ -89,14 +91,15 @@ const Navbar = () => {
           >
             Hire Me
           </button>
-          <li
+          </Link>
+         {/* <li
             className={`list-none gap-2 ${toggle ? "grid grid-cols-2" : "sm:flex"
               } `}
           >
             <span
               className="hover:scale-125 transition-all duration-500 ease-in-out"
               onClick={() => {
-                //window.open("https://www.fiverr.com/johnny_1999?up_rollout=true", "_blank");
+
                 settoggle(false);
               }}
             >
@@ -105,13 +108,13 @@ const Navbar = () => {
             <span
               className="hover:scale-125 transition-all duration-500 ease-in-out"
               onClick={() => {
-                //window.open("https://www.fiverr.com/johnny_1999?up_rollout=true", "_blank");
+
                 settoggle(false);
               }}
             >
               <img title="Spanish" style={imgStyle} src={spain} alt="Spanish" />
             </span>
-          </li>
+          </li>*/}
         </ul>
 
         <div>

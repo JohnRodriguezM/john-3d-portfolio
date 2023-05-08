@@ -1,4 +1,5 @@
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Stars, Tech, Works } from '../../components'
+import { About, /*Contact,*/ Experience, Hero, Navbar,/* Stars,*/ Tech, Works, Footer } from '../../components'
+/*import Footer from '../../components/Footer'*/
 export const Initial = () => {
   return (
     <>
@@ -11,11 +12,7 @@ export const Initial = () => {
         <Experience />
         <Tech />
         <Works />
-        <Feedbacks />
-        <section className="relative z-0">
-          <Contact />
-          <Stars />
-        </section>
+        <Footer/>
       </section>
     </>
   )

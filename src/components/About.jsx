@@ -17,7 +17,7 @@ function About ()  {
         className="flex flex-col items-center justify-center md:mt-20"
         //id="about"
       >
-        <p className={`${stylesUsing.sectionSubText} mt-20`}>Introducción</p>
+        <p className={`${stylesUsing.sectionSubText} mt-20`}>Introduction</p>
         <h2 className={stylesUsing.sectionHeadText}>Overview.</h2>
       </motion.div>
       <motion.p

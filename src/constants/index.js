@@ -3,7 +3,7 @@ import {
   backend,
   creator,
   web,
-  aws,
+  //aws,
   //javascript,
   typescript,
   //html,
@@ -39,6 +39,10 @@ export const navLinks = [
     id: "experience",
     title: "Work",
   },
+  {
+    id: "projects",
+    title: "Projects",
+  }
 ];
 
 const services = [
@@ -169,12 +173,12 @@ const technologies = [
     category: "Infrastructure",
     level: 2,
   },
-  {
+  /*{
     name: "AWS",
     icon: aws,
     category: "Infrastructure",
     level: 2,
-  },
+  },*/
 ];
 
 const experiences = [
@@ -236,7 +240,7 @@ const projects = [
   {
     name: "Movie app",
     description:
-      "The movies app allows you to watch a large number of movies and TV shows online. You can search by genre, actor or director, save your favorites and receive personalized recommendations. The app is constantly updated with new movies and shows so you always have something new to watch.",
+      "The movies app allows you to watch a large number of movies and TV shows online. You can search by genre, actor or director. The app is constantly updated with new movies and shows.",
     tags: [
       {
         name: "javascript",

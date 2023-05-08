@@ -20,6 +20,7 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import internet from './internet.png'
 
 import express from "./express.svg";
 import astro from "./astro.svg";
@@ -32,6 +33,7 @@ import aws from "./aws.svg";
 
 import tripplanner from "./company/tripplanner-logo-blue.ico";
 import jausme from "./company/jausme.svg";
+import back from './back.png'
 
 import movie from "./movieApp.jpeg";
 import rick from "./rick1.jpeg";
@@ -44,6 +46,8 @@ import spain from "./spain.jpg";
 
 export {
   spain,
+  internet,
+  back,
   express,
   astro,
   GH,

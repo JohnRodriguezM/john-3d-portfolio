@@ -13,6 +13,7 @@ const Experience = () => {
   return (
     <>
       <motion.div
+      id="experience"
         variants={textVariant()}
         className="flex flex-col items-center justify-center"
       >
