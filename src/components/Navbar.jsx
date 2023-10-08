@@ -51,15 +51,12 @@ const Navbar = () => {
             John &nbsp;
             <span className="hidden md:block lg:hidden"> | Software Dev</span>
             <span className="block md:hidden "> | SD</span>
-{/*
-            <span className="hidden sm:block md:hidden">| SD</span>
-            <span className="hidden md:block lg:hidden">| Software Dev</span>*/}
             <span className="hidden lg:block">| Software Developer</span>
           </p>
         </Link>
 
         <ul
-          className={`list-none items-center ${toggle ? " flex flex-col gap-4 w-1/2 justify-center bg-gradient-to-l from-black to-purple-900 p-7 rounded-3xl" : "hidden"
+          className={`list-none items-center ${toggle ? " flex flex-col gap-4 w-3/4 justify-center bg-gradient-to-l from-black to-purple-500 p-7 rounded-3xl" : "hidden"
             } sm:flex flex-row gap-11`}
         >
           {navLinks.map((link) => (
@@ -84,7 +81,6 @@ const Navbar = () => {
           >
           <button
             onClick={() => {
-              //window.open("https://www.fiverr.com/johnny_1999?up_rollout=true", "_blank");
              window.scrollTo(0, 0);
               settoggle(false);
             }}
@@ -93,29 +89,6 @@ const Navbar = () => {
             Hire Me
           </button>
           </Link>
-         {/* <li
-            className={`list-none gap-2 ${toggle ? "grid grid-cols-2" : "sm:flex"
-              } `}
-          >
-            <span
-              className="hover:scale-125 transition-all duration-500 ease-in-out"
-              onClick={() => {
-
-                settoggle(false);
-              }}
-            >
-              <img title="English" style={imgStyle} src={usa} alt="English" />
-            </span>
-            <span
-              className="hover:scale-125 transition-all duration-500 ease-in-out"
-              onClick={() => {
-
-                settoggle(false);
-              }}
-            >
-              <img title="Spanish" style={imgStyle} src={spain} alt="Spanish" />
-            </span>
-          </li>*/}
         </ul>
 
         <div>

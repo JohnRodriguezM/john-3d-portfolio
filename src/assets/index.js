@@ -33,6 +33,10 @@ import aws from "./aws.svg";
 
 import tripplanner from "./company/tripplanner-logo-blue.ico";
 import jausme from "./company/jausme.svg";
+
+//* poner las imagenes de las imagenes de hetiware OU y de macarenia
+import macarenia from './company/macarenia.jpg'
+import defaultImage from './company/defaultImage.jpg'
 import back from './back.png'
 
 import movie from "./movieApp.jpeg";
@@ -58,6 +62,8 @@ export {
   reactRouter,
   jausme,
   tripplanner,
+  macarenia,
+  defaultImage,
   usa,
   logo,
   backend,

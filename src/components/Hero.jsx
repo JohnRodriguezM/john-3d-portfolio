@@ -40,7 +40,7 @@ const Hero = () => {
             className="text-[#915eff] z-[999999] text-4xl"
           > <BsFillArrowDownCircleFill /> </motion.a>
           <h1 className={`${stylesUsing.heroHeadText}`}>Hi, I´m &nbsp;
-            <span className="text-[#915eff]">John </span>
+            <span className="text-[#915eff]">John</span>
           </h1>
           <p className={`${stylesUsing.heroSubText} mt-2 text-white-100`}>
             Full-Stack Developer passionate <br /> about technology and programming.

@@ -9,11 +9,13 @@ import { experiences } from "../constants";
 import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { stylesUsing } from "../styles";
+import { defaultImage } from "../assets";
+// eslint-disable-next-line react-refresh/only-export-components
 const Experience = () => {
   return (
     <>
       <motion.div
-      id="experience"
+        id="experience"
         variants={textVariant()}
         className="flex flex-col items-center justify-center"
       >
@@ -40,9 +42,9 @@ const Experience = () => {
               iconStyle={{ background: experience.iconBg, color: "#fff" }}
               icon={
                 <img
-                  src={experience.icon}
+                  src={experience.icon ? experience.icon : defaultImage}
                   alt={experience.company_name}
-                  className="w-10 h-10 mx-auto xll:mt-2"
+                  className="w-full h-full mx-auto rounded-full"
                 />
               }
             >

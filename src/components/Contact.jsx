@@ -8,6 +8,8 @@ import { slideIn } from "../utils/motion";
 import { stylesUsing } from "../styles";
 import { back } from "../assets";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import "sweetalert2/dist/sweetalert2.css";
 
 const Contact = () => {
   const formRef = useRef();
@@ -29,16 +31,13 @@ const Contact = () => {
     });
   };
 
-  //tBLytVHuIgf_8dUSV
-  //template_sio1o4a
-  //service_lvj1maa
-  console.log(import.meta.env.VITE_SERVICE_ID);
-  const handleSubmit = (e) => {
+  // console.log(import.meta.env.VITE_SERVICE_ID);
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
+    try {
+      const response = await emailjs.send(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
         {
@@ -49,22 +48,38 @@ const Contact = () => {
           message: form.message,
         },
         import.meta.env.VITE_PUBLIC_ID
-      )
-      .then((res) => {
-        console.log(res);
-        alert("Thanks for the message, I'll contact you asap");
-        setLoading(false);
+      );
+
+      if (response.status === 200) {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title:
+            "Your message has been sent, I will contact you as soon as possible",
+          showConfirmButton: false,
+          timer: 2500,
+        });
+
         setForm({
           name: "",
           email: "",
           message: "",
         });
-      })
-      .catch((err) => {
-        console.log(err);
-        alert("An error ocurred, please try again");
-        setLoading(false);
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (err) {
+      console.log(err);
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "Something went wrong, please try again",
+        showConfirmButton: false,
+        timer: 2500,
       });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

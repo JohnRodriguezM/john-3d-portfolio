@@ -15,6 +15,7 @@ import {
   git,
   docker,
   tripplanner,
+  macarenia,
   movie,
   rick,
   juan,
@@ -42,7 +43,7 @@ export const navLinks = [
   {
     id: "projects",
     title: "Projects",
-  }
+  },
 ];
 
 const services = [
@@ -192,7 +193,6 @@ const experiences = [
       "Implement different pages and components with vanilla JavaScript, ensuring they are accessible, intuitive and efficient.",
       "Fix bugs and improve app stability based on team requirements.",
       "Participar en la planificación y dar priorización de características de la página web.",
-
     ],
   },
   {
@@ -200,11 +200,34 @@ const experiences = [
     company_name: "Jausme CO",
     icon: jausme,
     iconBg: "#E6DEDD",
-    date: "Jun 2022 - Jan 2023",
+    date: "Jun 2022 - Dec 2022",
     points: [
       "Develop and maintain web applications using libraries such as React and its ecosystem in TypeScript",
       "Manage the attention to the requirements by the internal work team to ensure that the application is coherent and integrates correctly with existing systems.",
-      "Participation in the definition of standards and good development practices through the testing of existing applications using testing libraries such as: jest and react-testing library."
+      "Participation in the definition of standards and good development practices through the testing of existing applications using testing libraries such as: jest and react-testing library.",
+    ],
+  },
+  {
+    title: "Frontend engineer",
+    company_name: "Hetiware OÜ",
+    // icon: macarenia,
+    iconBg: "none",
+    date: "May 2023 - Aug 2023",
+    points: [
+      "Developed the web application from scratch using Next Js and typescript.",
+      "I built the initial system of the cryptocurrency exchange consuming the backend APIs and using systems and libraries for web3 development.",
+    ],
+  },
+  {
+    title: "Software engineer",
+    company_name: "Macarenia Corp",
+    icon: macarenia,
+    iconBg: "none",
+    date: "May 2023 - Present",
+    points: [
+      "Frontend development with React, TypeScript, Redux, React-hook-form, Material UI and axios: Responsible for creating attractive and functional user interfaces using advanced technologies.",
+      "Software Development Mentoring: provided guidance, encouraging skill growth and adoption of best practices in the team.",
+      "Comprehensive Development and Implementation of the Document Management subsystem in the Application, covering the structuring, storage, search and efficient tracking of digital documents.",
     ],
   },
 ];
@@ -260,7 +283,6 @@ const projects = [
     link_page: "https://movie-app-silk-delta.vercel.app/main.html",
   },
 
-
   {
     name: "Rick and Morty Fan App",
     description:
@@ -284,8 +306,6 @@ const projects = [
     link_page: "https://rick-morty-app-c905f.firebaseapp.com/",
   },
 
-
-
   {
     name: "Political project",
     description:
@@ -307,7 +327,8 @@ const projects = [
     image: juan,
     source_code_link: "https://github.com/JohnRodriguezM/political-project",
     link_page: "https://juan-jose-cubides.pages.dev/",
-  }, {
+  },
+  {
     name: "Real state project",
     description:
       "Our real estate page presents our properties and objectives in a platform that is easy to navigate and accessible from any device. The page is secure and designed to adapt to different screen sizes.",
@@ -328,7 +349,7 @@ const projects = [
     image: realState,
     source_code_link: "https://github.com/JohnRodriguezM/real-estate",
     link_page: "https://web-inmuweb-inmobiliaria.pages.dev/",
-  }
+  },
 ];
 
 export { services, technologies, experiences, testimonials, projects };
