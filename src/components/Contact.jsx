@@ -110,7 +110,7 @@ const Contact = () => {
             className="mt-12 flex flex-col gap-8"
           >
             <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">Your Name</span>
+              <span className="text-white font-medium mb-4">{t('name')}</span>
               <input
                 type="text"
                 name="name"
@@ -121,7 +121,7 @@ const Contact = () => {
               />
             </label>
             <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">Your email</span>
+              <span className="text-white font-medium mb-4">Email</span>
               <input
                 type="email"
                 name="email"
@@ -132,7 +132,9 @@ const Contact = () => {
               />
             </label>
             <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">Your Message</span>
+              <span className="text-white font-medium mb-4">
+                {t('message')}
+              </span>
               <textarea
                 rows={7}
                 name="message"
@@ -147,7 +149,7 @@ const Contact = () => {
               type="submit"
               className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
             >
-              {loading ? "Sending..." : "Send"}
+              {`${loading ? t('sending') : t('send')}`}
             </button>
           </form>
         </motion.div>

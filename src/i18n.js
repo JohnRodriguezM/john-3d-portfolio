@@ -69,8 +69,12 @@ i18n.use(initReactI18next).init({
         works: "projects",
         text_works:
           "As a developer I have had the opportunity to work with clients from different cities and developers from different countries. Over the past two years, I have worked with a variety of technologies, including React, TypeScript, Supabase, Firebase, Tailwind, and more. I am committed to continue improving my skills and learning new technologies so that I can always offer the best service to my clients.",
-          get_in_touch: "Get in touch",
-          contact_me: "Contact",
+        get_in_touch: "Get in touch",
+        contact_me: "Contact",
+        name: "Name",
+        message: "Message",
+        sending: "Sending...",
+        send: "Send",
 
         //! reemplazo de los projects
         /*      projects: {
@@ -160,8 +164,12 @@ i18n.use(initReactI18next).init({
         works: "proyectos",
         text_works:
           "Como desarrollador he tenido la oportunidad de trabajar con clientes de diferentes ciudades y desarrolladores de diferentes países. En los últimos dos años, he trabajado con una variedad de tecnologías, incluidas React, TypeScript, Supabase, Firebase, Tailwind, y más. Estoy comprometido a seguir mejorando mis habilidades y aprendiendo nuevas tecnologías para poder ofrecer siempre el mejor servicio a mis clientes.",
-          get_in_touch: "Contáctame",
-          contact_me: "Contacto",
+        get_in_touch: "Contáctame",
+        contact_me: "Contacto",
+        name: "Nombre",
+        message: "Mensaje",
+        sending: "Enviando...",
+        send: "Enviar",
 
         //! reemplazo de los projects
         projects: {
