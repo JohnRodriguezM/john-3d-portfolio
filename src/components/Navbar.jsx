@@ -18,7 +18,7 @@ import { useTranslation } from "react-i18next";
 */
 const Navbar = () => {
   //Calling t and i18n method from useTranslation hook
-  const { /* t,*/ i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   //* llamado a useJsons
   const { navLinks } = useJsons();
 
@@ -104,7 +104,7 @@ const Navbar = () => {
               }}
               className=" sm:block bg-slate-600 text-white px-4 py-2 rounded-md font-medium hover:bg-white hover:text-secondary transition duration-300"
             >
-              Hire me now!
+              {t("hireMeNow")}
             </button>
           </Link>
         </ul>

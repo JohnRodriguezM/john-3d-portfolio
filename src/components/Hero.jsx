@@ -7,7 +7,9 @@ import ComputersCanvas from './canvas/Computers'
 /*import { motion } from 'framer-motion';*/
 import { motion } from 'framer-motion'
 import { BsFillArrowDownCircleFill } from 'react-icons/bs'
+import { useTranslation } from 'react-i18next'
 const Hero = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     document.addEventListener('resize', () => {
       console.log('resize')
@@ -39,11 +41,11 @@ const Hero = () => {
             href="#about"
             className="text-[#915eff] z-[999999] text-4xl"
           > <BsFillArrowDownCircleFill /> </motion.a>
-          <h1 className={`${stylesUsing.heroHeadText}`}>Hi, I´m &nbsp;
+          <h1 className={`${stylesUsing.heroHeadText}`}>{t('saludo')}&nbsp;
             <span className="text-[#915eff]">John</span>
           </h1>
           <p className={`${stylesUsing.heroSubText} mt-2 text-white-100`}>
-            Software Developer passionate <br /> about coffee.
+            {t('softWareDeveloper')} <br /> {t('aboutCoffee')}
             <br />
           </p>
         </div>

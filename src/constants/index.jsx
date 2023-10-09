@@ -1,8 +1,8 @@
 import {
-  mobile,
+  /* mobile,
   backend,
-  creator,
-  web,
+  creator,*/
+  // web,
   aws,
   javascript,
   typescript,
@@ -49,20 +49,20 @@ export const useJsons = () => {
 
   const services = [
     {
-      title: "Web Developer",
-      icon: web,
+      title: t("services.webDevelopment.title"),
+      image: t("services.webDevelopment.image"),
     },
     {
-      title: "Software Developer",
-      icon: mobile,
+      title: t("services.softwareDevelopment.title"),
+      image: t("services.softwareDevelopment.image"),
     },
     {
-      title: "Backend Developer",
-      icon: backend,
+      title: t("services.backend.title"),
+      image: t("services.backend.image"),
     },
     {
-      title: "Frontend Developer",
-      icon: creator,
+      title: t("services.frontend.title"),
+      image: t("services.frontend.image"),
     },
   ];
 

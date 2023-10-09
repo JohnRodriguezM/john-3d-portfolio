@@ -10,8 +10,10 @@ import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { stylesUsing } from "../styles";
 import { defaultImage } from "../assets";
+import { useTranslation } from "react-i18next";
 // eslint-disable-next-line react-refresh/only-export-components
 const Experience = () => {
+  const { t } = useTranslation();
   const { experiences } = useJsons();
   return (
     <>
@@ -21,10 +23,10 @@ const Experience = () => {
         className="flex flex-col items-center justify-center"
       >
         <p className={`${stylesUsing.sectionSubText} mt-20`}>
-          what I have done so far
+          {t("what_i_have_done_so_far")}
         </p>
         <h2 className={`${stylesUsing.sectionHeadText} mb-20`}>
-          Work Experience.
+          {t('work_experience')}
         </h2>
       </motion.div>
       <div className="mt-6 flex flex-col">
