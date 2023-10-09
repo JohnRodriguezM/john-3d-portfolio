@@ -5,13 +5,14 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
-import { experiences } from "../constants";
+import { useJsons } from "../constants";
 import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { stylesUsing } from "../styles";
 import { defaultImage } from "../assets";
 // eslint-disable-next-line react-refresh/only-export-components
 const Experience = () => {
+  const { experiences } = useJsons();
   return (
     <>
       <motion.div

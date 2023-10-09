@@ -1,11 +1,13 @@
 import { Wrapper } from "../HOC";
 //import { BallCanvas } from './canvas'
-import { technologies } from "../constants";
+import { useJsons } from "../constants";
 import { stylesUsing } from "../styles";
 import { motion } from "framer-motion";
 
 
+// eslint-disable-next-line react-refresh/only-export-components
 const Tech = () => {
+  const {technologies} = useJsons();
   return (
     <div className="text-center">
       <p className={`${stylesUsing.sectionSubText} mt-10`}>
@@ -38,4 +40,5 @@ const Tech = () => {
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default Wrapper(Tech, "tech");

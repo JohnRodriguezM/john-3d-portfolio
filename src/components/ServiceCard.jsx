@@ -3,9 +3,10 @@
 import { Tilt } from "react-tilt";
 import { fadeIn } from "../utils/motion";
 import { motion } from 'framer-motion';
-import { services } from "../constants";
+import { useJsons } from "../constants";
 
 const ServiceCard = ({ title, index }) => {
+  const { services } = useJsons();
   return (
     <Tilt
       className="cursor-pointer xs:-[250px] w-11/12 flex justify-center flex-wrap  mx-auto"

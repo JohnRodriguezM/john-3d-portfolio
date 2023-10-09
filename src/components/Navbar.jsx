@@ -2,9 +2,10 @@ import { /*useEffect*/ useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { stylesUsing } from "../styles";
-import { navLinks } from "../constants";
+import { useJsons } from "../constants";
 
-import { logo, menu, close, /*usa, spain*/ } from "../assets";
+import { logo, menu, close /*usa, spain*/ } from "../assets";
+import { useTranslation } from "react-i18next";
 
 /*const imgStyle = {
   width: "30px",
@@ -16,6 +17,11 @@ import { logo, menu, close, /*usa, spain*/ } from "../assets";
 };
 */
 const Navbar = () => {
+  //Calling t and i18n method from useTranslation hook
+  const { /* t,*/ i18n } = useTranslation();
+  //* llamado a useJsons
+  const { navLinks } = useJsons();
+
   const [active, setActive] = useState("");
   const [toggle, settoggle] = useState(false);
 
@@ -49,23 +55,37 @@ const Navbar = () => {
           />
           <p className="text-white text-[1.1] font-bold cursor-pointer flex">
             John &nbsp;
-            <span className="hidden md:block lg:hidden"> | Software Dev</span>
-            <span className="block md:hidden "> | SD</span>
-            <span className="hidden lg:block">| Software Developer</span>
+            {/*  <span className="hidden md:block lg:hidden"> | Software Dev</span>*/}
+            <span className="block "> | SD</span> {/* md:hidden  */}
+            {/* <span className="hidden lg:block">| Software Developer</span> */}
           </p>
         </Link>
 
         <ul
-          className={`list-none items-center ${toggle ? " flex flex-col gap-4 w-3/4 justify-center bg-gradient-to-l from-black to-purple-500 p-7 rounded-3xl" : "hidden"
-            } sm:flex flex-row gap-11`}
+          className={`list-none items-center ${
+            toggle
+              ? " flex flex-col gap-4 w-3/4 justify-center bg-gradient-to-l from-black to-purple-500 p-7 rounded-3xl"
+              : "hidden"
+          } sm:flex flex-row gap-11`}
         >
+          <select
+            className="appearance-none bg-white border border-gray-400 hover:border-gray-500 px-3 py-2 pr-3 rounded shadow text-gray-700 w-200 "
+            onChange={(e) => {
+              const languageValue = e.target.value;
+              i18n.changeLanguage(languageValue);
+            }}
+          >
+            <option value="en">English</option>
+            <option value="sp">Español</option>
+          </select>
           {navLinks.map((link) => (
             <li key={link.id}>
               <a
                 href={`#${link.id}`}
                 className={`
-             ${active === link.title ? "text-white" : "text-secondary"
-                  } hover:text-white hover:shadow-2xl text-[1.1rem] font-medium cursor-pointer
+             ${
+               active === link.title ? "text-white" : "text-secondary"
+             } hover:text-white hover:shadow-2xl text-[1.1rem] font-medium cursor-pointer
              `}
                 onClick={() => {
                   setActive(link.title);
@@ -76,18 +96,16 @@ const Navbar = () => {
               </a>
             </li>
           ))}
-          <Link
-            to="/contact"
-          >
-          <button
-            onClick={() => {
-             window.scrollTo(0, 0);
-              settoggle(false);
-            }}
-            className=" sm:block bg-secondary text-white px-4 py-2 rounded-md font-medium hover:bg-white hover:text-secondary transition duration-300"
-          >
-            Hire Me
-          </button>
+          <Link to="/contact">
+            <button
+              onClick={() => {
+                window.scrollTo(0, 0);
+                settoggle(false);
+              }}
+              className=" sm:block bg-slate-600 text-white px-4 py-2 rounded-md font-medium hover:bg-white hover:text-secondary transition duration-300"
+            >
+              Hire me now!
+            </button>
           </Link>
         </ul>
 
