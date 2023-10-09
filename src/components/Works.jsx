@@ -8,8 +8,10 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { useJsons } from "../constants";
 import { Tilt } from "react-tilt";
 import { github, internet } from "../assets";
+import { useTranslation } from "react-i18next";
 
 const Works = () => {
+  const { t } = useTranslation();
   const { projects } = useJsons();
   return (
     <>
@@ -21,9 +23,11 @@ const Works = () => {
           }}
           className={stylesUsing.sectionSubText}
         >
-          Here are some of my projects
+         {t('here_are_some_of_my_projects')}
         </p>
-        <h2 className={stylesUsing.sectionHeadText}>Works</h2>
+        <h2 className={stylesUsing.sectionHeadText}>{
+          t('works')
+        }</h2>
       </motion.div>
       <div className="w-full flex justify-center">
         <motion.p
@@ -33,13 +37,7 @@ const Works = () => {
           }}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] text-center"
         >
-          As a developer I have had the opportunity to work with clients from
-          different cities and developers from different countries. Over the
-          past two years, I have worked with a variety of technologies,
-          including React, TypeScript, Supabase, Firebase, Tailwind, and more. I
-          am committed to continue improving my skills and learning new
-          technologies so that I can always offer the best service to my
-          clients.
+         {t('text_works')}
         </motion.p>
       </div>
       <div className="flex flex-wrap mt-10 gap-7 justify-center">
@@ -48,6 +46,9 @@ const Works = () => {
             project;
           return (
             <motion.div
+              onClick={() => {
+                window.open(link_page, "_blank");
+              }}
               key={index}
               variants={fadeIn("up", "spring", index * 0.5, 0.75)}
             >

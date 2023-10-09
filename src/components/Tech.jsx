@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Wrapper } from "../HOC";
 //import { BallCanvas } from './canvas'
 import { useJsons } from "../constants";
@@ -7,14 +8,15 @@ import { motion } from "framer-motion";
 
 // eslint-disable-next-line react-refresh/only-export-components
 const Tech = () => {
+  const { t } = useTranslation();
   const {technologies} = useJsons();
   return (
     <div className="text-center">
       <p className={`${stylesUsing.sectionSubText} mt-10`}>
-        Technologies I have worked with
+        {t('technologies_i_have_worked_with')}
       </p>
       <h2 className={`${stylesUsing.sectionHeadText} mb-12 text-center`}>
-        My tech stack.
+        {t('technologies')}
       </h2>{" "}
       <div className="flex flex-row flex-wrap justify-center items-center gap-10 text-center">
         {technologies.map((tech, index) => {

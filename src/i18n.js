@@ -27,6 +27,10 @@ i18n.use(initReactI18next).init({
             id: "projects",
             title: "Projects",
           },
+          contact: {
+            id: "contact",
+            title: "Contact",
+          },
         },
         //* hire me now!
         hireMeNow: "Hire me now!",
@@ -59,16 +63,22 @@ i18n.use(initReactI18next).init({
         },
         what_i_have_done_so_far: "What I have done so far",
         work_experience: "Work experience",
+        technologies_i_have_worked_with: "Technologies I have worked with",
+        technologies: "My tech stack",
+        here_are_some_of_my_projects: "Here are some of my projects",
+        works: "projects",
+        text_works:
+          "As a developer I have had the opportunity to work with clients from different cities and developers from different countries. Over the past two years, I have worked with a variety of technologies, including React, TypeScript, Supabase, Firebase, Tailwind, and more. I am committed to continue improving my skills and learning new technologies so that I can always offer the best service to my clients.",
+          get_in_touch: "Get in touch",
+          contact_me: "Contact",
 
         //! reemplazo de los projects
-        projects: {
-          /* MovieApp: {},
+        /*      projects: {
+          MovieApp: {},
           RickAndMortyFanApp:{},
-          PoliticalProject:{}, */
+          PoliticalProject:{},
           realEstate: {
             name: "Real state project",
-            description:
-              "Our real estate page presents our properties and objectives in a platform that is easy to navigate and accessible from any device. The page is secure and designed to adapt to different screen sizes.",
             technologies: [
               {
                 name: "React",
@@ -83,7 +93,7 @@ i18n.use(initReactI18next).init({
             source_code_link: "https://github.com/JohnRodriguezM/real-estate",
             link_page: "https://web-inmuweb-inmobiliaria.pages.dev/",
           },
-        },
+        },*/
       },
     },
     // ! ------------ Idioma español ------------
@@ -107,6 +117,10 @@ i18n.use(initReactI18next).init({
           projects: {
             id: "projects",
             title: "Proyectos",
+          },
+          contact: {
+            id: "contact",
+            title: "Contacto",
           },
         },
         //* hire me now!
@@ -140,13 +154,19 @@ i18n.use(initReactI18next).init({
         },
         what_i_have_done_so_far: "Lo que he hecho hasta ahora",
         work_experience: "Experiencia laboral",
+        technologies_i_have_worked_with: "Tecnologías con las que he trabajado",
+        technologies: "Mi stack tecnológico",
+        here_are_some_of_my_projects: "Estos son algunos de mis proyectos",
+        works: "proyectos",
+        text_works:
+          "Como desarrollador he tenido la oportunidad de trabajar con clientes de diferentes ciudades y desarrolladores de diferentes países. En los últimos dos años, he trabajado con una variedad de tecnologías, incluidas React, TypeScript, Supabase, Firebase, Tailwind, y más. Estoy comprometido a seguir mejorando mis habilidades y aprendiendo nuevas tecnologías para poder ofrecer siempre el mejor servicio a mis clientes.",
+          get_in_touch: "Contáctame",
+          contact_me: "Contacto",
 
         //! reemplazo de los projects
         projects: {
           realEstate: {
             name: "Proyecto de Bienes Raíces",
-            description:
-              "Nuestra página de bienes raíces presenta nuestras propiedades y objetivos en una plataforma de fácil navegación y accesible desde cualquier dispositivo. La página es segura y está diseñada para adaptarse a diferentes tamaños de pantalla.",
             technologies: [
               {
                 name: "React",

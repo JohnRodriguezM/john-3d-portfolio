@@ -68,7 +68,7 @@ const Experience = () => {
                 {experience.company_name}
               </h4>
 
-              <ul className="mt-5 list-disc ml-5 space-y-2">
+             {/* <ul className="mt-5 list-disc ml-5 space-y-2">
                 {experience.points.map((point, index) => (
                   <li
                     style={{
@@ -80,7 +80,7 @@ const Experience = () => {
                     {point}
                   </li>
                 ))}
-              </ul>
+              </ul>*/}
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>

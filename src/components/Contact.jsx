@@ -10,8 +10,10 @@ import { back } from "../assets";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 import "sweetalert2/dist/sweetalert2.css";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const {t} = useTranslation();
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -96,8 +98,11 @@ const Contact = () => {
           variants={slideIn("left", "tween", 0.2, 1)}
           className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
         >
-          <p className={stylesUsing.sectionSubText}>Get in touch</p>
-          <h3 className={stylesUsing.sectionHeadText}>Contact.</h3>
+          <p className={stylesUsing.sectionSubText}>{t('get_in_touch')}
+            </p>
+          <h3 className={stylesUsing.sectionHeadText}>
+            {t('contact_me')}
+          </h3>
 
           <form
             ref={formRef}
@@ -111,7 +116,7 @@ const Contact = () => {
                 name="name"
                 value={form.name}
                 onChange={handleChange}
-                placeholder="What's your name?"
+                placeholder="Juan..."
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
               />
             </label>
@@ -122,7 +127,7 @@ const Contact = () => {
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="What's your email?"
+                placeholder="a@gmail.com"
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
               />
             </label>
@@ -133,7 +138,7 @@ const Contact = () => {
                 name="message"
                 value={form.message}
                 onChange={handleChange}
-                placeholder="What is your message?"
+                placeholder="..."
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
               />
             </label>
